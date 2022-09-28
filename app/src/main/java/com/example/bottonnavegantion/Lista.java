@@ -43,6 +43,10 @@ public class Lista <T> {
         }
     }
 
+    public int size() {
+        return quantidade;
+    }
+
     public void print() {
         System.out.println(this);
     }

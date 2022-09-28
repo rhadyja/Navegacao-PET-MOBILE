@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +15,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class HidricoFragment extends Fragment {
+
+    public ImageView imageView;
+    public Lista<AreaClicavel> list = new Lista(); //lista para guardar as linhas (areas clicaveis) do arquivo
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +62,40 @@ public class HidricoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_hidrico, container, false);
+    }
+
+    public void verificarAreaDoClique(double x, double y) {
+        //receber uma lista, x do clique e y do clique
+        //verificar cada índice da lista
+        for (int k = 1; k < list.size(); k++) {
+            if (list.consultar(0).getAtual() == list.consultar(k).getAtual()) {
+                if (list.consultar(k).getX1() < x && x < list.consultar(k).getX2()
+                        && list.consultar(k).getY1() < y && y < list.consultar(k).getY2()) { //verificando area que foi clicada
+                    imageView.setImageResource(list.consultar(k).getProximo());//fazer troca da imagem atual pela proxima
+                    break;
+                }
+            }
+            break;
+        }
+
+        for (int i = 1; i < list.size(); i++) { //percorrendo a lista
+            if (list.consultar(i).getX1() < x && x < list.consultar(i).getX2()
+                    && list.consultar(i).getY1() < y && y < list.consultar(i).getY2()) { //verificando area que foi clicada
+                imageView.setImageResource(list.consultar(i).getProximo()); //fazer troca da imagem atual pela proxima
+                break;
+            }
+            for (int j = i + 1; j < list.size() - 1; j++) {
+                if (list.consultar(i).getProximo() == list.consultar(j).getAtual()) {
+                    i = j - 1;
+                    break;
+                }
+                break;
+            }
+        }
     }
 }
