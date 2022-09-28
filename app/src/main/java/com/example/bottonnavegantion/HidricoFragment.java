@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,13 +61,18 @@ public class HidricoFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_hidrico, container, false);
 
+        imageView = (ImageView) view.findViewById(R.id.image);
 
+        imageView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(getActivity(), "clicou", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hidrico, container, false);
+        return view;
     }
 
     public void verificarAreaDoClique(double x, double y) {
@@ -96,6 +102,13 @@ public class HidricoFragment extends Fragment {
                 }
                 break;
             }
+        }
+    }
+
+    public void onBackPressed() {
+        for (int k = 1; k < list.size(); k++) {
+            imageView.setImageResource(list.consultar(k).getAtual());//fazer troca da imagem atual pela proxima
+            break;
         }
     }
 }
