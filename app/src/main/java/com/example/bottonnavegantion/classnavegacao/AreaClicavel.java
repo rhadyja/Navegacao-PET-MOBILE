@@ -1,4 +1,4 @@
-package com.example.bottonnavegantion;
+package com.example.bottonnavegantion.classnavegacao;
 
 public class AreaClicavel {
     private int atual;

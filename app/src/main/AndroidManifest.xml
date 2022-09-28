@@ -14,16 +14,16 @@
         android:theme="@style/Theme.BottonNavegantion"
         tools:targetApi="31">
         <activity
-            android:name=".TermicoActivity"
+            android:name=".activity.TermicoActivity"
             android:exported="false" />
         <activity
-            android:name=".EolicoActivity"
+            android:name=".activity.EolicoActivity"
             android:exported="false" />
         <activity
-            android:name=".HidricoActivity"
+            android:name=".activity.HidricoActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".fragmentstela.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

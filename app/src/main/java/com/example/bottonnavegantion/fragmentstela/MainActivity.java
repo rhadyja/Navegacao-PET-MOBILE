@@ -1,4 +1,4 @@
-package com.example.bottonnavegantion;
+package com.example.bottonnavegantion.fragmentstela;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.bottonnavegantion.R;
 import com.example.bottonnavegantion.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.bottonnavegantion;
+package com.example.bottonnavegantion.fragmentstela;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,14 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import com.example.bottonnavegantion.R;
+import com.example.bottonnavegantion.activity.EolicoActivity;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HidricoFragment#newInstance} factory method to
+ * Use the {@link EolicoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HidricoFragment extends Fragment {
+public class EolicoFragment extends Fragment {
 
     public ImageView imageView;
 
@@ -29,7 +31,7 @@ public class HidricoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HidricoFragment() {
+    public EolicoFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class HidricoFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HidricoFragment.
+     * @return A new instance of fragment EolicoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HidricoFragment newInstance(String param1, String param2) {
-        HidricoFragment fragment = new HidricoFragment();
+    public static EolicoFragment newInstance(String param1, String param2) {
+        EolicoFragment fragment = new EolicoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,13 +64,13 @@ public class HidricoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_hidrico, container, false);
+        View view = inflater.inflate(R.layout.fragment_eolico, container, false);
 
         imageView = (ImageView) view.findViewById(R.id.image);
 
         imageView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(getActivity(), HidricoActivity.class);
+                Intent intent = new Intent(getActivity(), EolicoActivity.class);
                 startActivity(intent);
             }
         });
@@ -76,5 +78,4 @@ public class HidricoFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
-
 }
