@@ -1,0 +1,14 @@
+aerogerador2,0,0,0,0,0
+aerogerador2,149,224,427,344,motoaerogerador
+aerogerador2,432,18,710,270,pa1
+aerogerador2,220,21,404,214,pa1
+motoaerogerador,370,119,455,272,gearbox
+motoaerogerador,458,198,500,307,generator
+motoaerogerador,541,213,597,282,controller
+motoaerogerador,598,159,675,303,anemometer
+motoaerogerador,352,303,391,345,yawmotor
+motoaerogerador,289,153,354,213,brake
+motoaerogerador,506,264,537,303,highspeedshaft
+motoaerogerador,309,100,366,145,lowspeedshaft
+pa1,41,126,669,539,pa2
+pa2,142,43,1499,541,pa3

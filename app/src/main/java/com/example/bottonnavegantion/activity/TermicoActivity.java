@@ -2,6 +2,7 @@ package com.example.bottonnavegantion.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import com.example.bottonnavegantion.R;
 import com.example.bottonnavegantion.classnavegacao.AreaClicavel;
 import com.example.bottonnavegantion.classnavegacao.Lista;
+import com.example.bottonnavegantion.fragmentstela.MainActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -122,9 +124,6 @@ public class TermicoActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        for (int k = 1; k < list.size(); k++) {
-            imageView.setImageResource(list.consultar(k).getAtual());//fazer troca da imagem atual pela proxima
-            break;
-        }
+        super.onBackPressed();
     }
 }

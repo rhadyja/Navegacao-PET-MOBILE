@@ -31,7 +31,7 @@ public class EolicoActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.image);
 
-        String arquivo = "Solar.txt"; //passando nome do arquivo, que está no assets, que deseja fazer a navegação
+        String arquivo = "Eolico.txt"; //passando nome do arquivo, que está no assets, que deseja fazer a navegação
 
         AssetManager assetManager = getResources().getAssets();
         InputStream inputStream;
@@ -122,9 +122,6 @@ public class EolicoActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        for (int k = 1; k < list.size(); k++) {
-            imageView.setImageResource(list.consultar(k).getAtual());//fazer troca da imagem atual pela proxima
-            break;
-        }
+        super.onBackPressed();
     }
 }

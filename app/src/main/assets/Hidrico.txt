@@ -1,0 +1,4 @@
+hidreletrica,0,0,0,0,0
+hidreletrica,168,102,274,154,casadeforca
+hidreletrica,173,158,266,252,turbina
+hidreletrica,5,71,111,150,reservatorio
