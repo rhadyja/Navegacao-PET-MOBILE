@@ -1,5 +1,6 @@
 package com.example.bottonnavegantion;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -67,7 +68,8 @@ public class TermicoFragment extends Fragment {
 
         imageView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(getActivity(), "clicou", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), TermicoActivity.class);
+                startActivity(intent);
             }
         });
 
